@@ -3,7 +3,8 @@ const app =  express()
 const path = require('path')
 const port = process.env.PORT || 80
 
-app.use(express.static("./client/build"))
+// app.use(express.static("./client/build"))
+app.use('/',express.static(path.join(__dirname, 'client', 'build')));
 app.use(express.json());
 
 // app.get('/', (req, res) => {
@@ -17,9 +18,9 @@ app.post('/login', (req, res) => {
     res.json({username, password})
 })
 
-app.get("/", (res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-});
+// app.get("/", (res) => {
+//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+// });
 
 app.listen(port, () => {
     console.log('server running')
