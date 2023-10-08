@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         {/* <Route path='/login' element={<Login />} />
@@ -19,7 +21,7 @@ function App() {
         <Route path='/editeducation' element={<EditEducation />} />
         <Route path='/editwork' element={<EditWork />} /> */}
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
 
   );
