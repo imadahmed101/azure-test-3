@@ -55,7 +55,7 @@ const Post = () => {
     })
       .then((response) => {
         alert('New comment created')
-        window.location.reload()
+        setComment('')
       })
       .catch((error) => {
         alert(error.response.data)
