@@ -15,7 +15,14 @@ const commentRoute = require('./routes/comment')
 // app.use('/',express.static(path.join(__dirname, 'client', 'build', "index.html")));
 app.use(express.static('client/build'));
 app.use(express.json());
-app.use(cors())
+const corsOpts = {
+    origin: 'https://studentconnect.azurewebsites.net',
+    credentials: true,
+    methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
+    allowedHeaders: ['Content-Type'],
+    exposedHeaders: ['Content-Type']
+}
+app.use(cors(corsOpts))
 // app.get('/', (req, res) => {
 //     res.send('home page accessed')
 // })
