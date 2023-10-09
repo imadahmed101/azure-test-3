@@ -19,8 +19,8 @@ const corsOpts = {
     origin: 'https://studentconnect.azurewebsites.net',
     credentials: true,
     methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
-    allowedHeaders: ['Content-Type'],
-    exposedHeaders: ['Content-Type']
+    allowedHeaders: ['Access-Control-Allow-Headers','Content-Type'],
+    exposedHeaders: ['Content-Type'],
 }
 app.use(cors(corsOpts))
 // app.get('/', (req, res) => {
