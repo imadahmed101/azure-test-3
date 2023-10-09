@@ -16,7 +16,9 @@ const commentRoute = require('./routes/comment')
 app.use(express.static('client/build'));
 app.use(express.json());
 
-app.use(cors())
+app.use(cors({
+    origin: "https://studentconnect.azurewebsites.net"
+}))
 
 // const corsOpts = {
     // origin: 'https://studentconnect.azurewebsites.net',
