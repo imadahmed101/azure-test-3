@@ -24,6 +24,8 @@ app.use(cors({
 //     console.log("MongoDB database connection established successfully");
 // });
 
+mongoose.connect(DBCONNECTION, { useNewUrlParser: true, useCreateIndex: true });
+
 // const corsOpts = {
     // origin: 'https://studentconnect.azurewebsites.net',
     // credentials: true,
