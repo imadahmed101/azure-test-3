@@ -3,7 +3,7 @@ const app =  express()
 const path = require('path')
 const env = require('dotenv/config')
 const port = process.env.PORT || 80
-const DBCONNECTION = process.env.DBCONNECTION
+const DBCONNECTION = process.env.DBCONNECTION || 'mongodb+srv://admin:admin123@devdbserver.4bx9t0h.mongodb.net/azure-test-3?retryWrites=true&w=majority'
 
 const mongoose = require('mongoose')
 const cors = require('cors')
