@@ -39,10 +39,10 @@ app.get('*', (req, res) => {
 //     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 // });
 
-// app.listen(port, () => {
-//     console.log('server running')
-// })
+app.listen(port, () => {
+    console.log('server running')
+})
 
-mongoose.connect(DBCONNECTION)
-.then(() => {app.listen((port), console.log (`Server running on port ${port}`))})
-.catch((error) => console.log(error.message))
+// mongoose.connect(DBCONNECTION)
+// .then(() => {app.listen((port), console.log (`Server running on port ${port}`))})
+// .catch((error) => console.log(error.message))
