@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
-const baseURL = 'https://studentconnect.azurewebsites.net/register'
+const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/register'
 
 const Register = () => {
 

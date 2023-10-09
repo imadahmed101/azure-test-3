@@ -17,7 +17,7 @@ app.use(express.static('client/build'));
 app.use(express.json());
 
 app.use(cors({
-    origin: "https://studentconnect.azurewebsites.net"
+    origin: "https://azure-test-3-imadahmed101.azurewebsites.net/"
 }))
 
 // const corsOpts = {
