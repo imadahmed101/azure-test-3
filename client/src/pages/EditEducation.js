@@ -2,9 +2,10 @@ import React, { useEffect, useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Context } from '../App'
+import baseURL from '../baseURL'
 
-const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/education'
-const editURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/editeducation'
+// const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/education'
+// const editURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/editeducation'
 
 
 const EditEducation = () => {
@@ -25,7 +26,7 @@ const EditEducation = () => {
             return navigate('/login')
         }
 
-        axios.post(baseURL, { student })
+        axios.post(`${baseURL}/education`, { student })
             .then((response) => {
                 setStudents(response.data)
             })
@@ -39,7 +40,7 @@ const EditEducation = () => {
     const formSubmit = (e) => {
         e.preventDefault()
 
-        axios.post(editURL, {
+        axios.post(`${baseURL}/editeducation`, {
             student,
             highestDegree,
             schoolName,

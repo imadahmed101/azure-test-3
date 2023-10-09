@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
-const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/register'
+import baseURL from '../baseURL'
+
 
 const Register = () => {
 
@@ -37,7 +38,7 @@ const Register = () => {
       return alert('Passwords do not match.')
     }
 
-    axios.post(baseURL, {
+    axios.post(`${baseURL}/register`, {
       firstName,
       lastName,
       username,

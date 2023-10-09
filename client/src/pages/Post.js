@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 // import { Context } from '../App'
+import baseURL from '../baseURL'
 
 const Post = () => {
 
@@ -22,7 +23,7 @@ const Post = () => {
       return navigate('/login')
     }
 
-    axios.get(`https://azure-test-3-imadahmed101.azurewebsites.net/post/${postID}`)
+    axios.get(`${baseURL}/post/${postID}`)
       .then((response) => {
         setPost(response.data)
         setQuestion(response.data._id)
@@ -31,7 +32,7 @@ const Post = () => {
         alert(error.response.data)
       })
 
-    axios.get(`https://azure-test-3-imadahmed101.azurewebsites.net/comment`)
+    axios.get(`${baseURL}/comment`)
       .then((response) => {
         setComments(response.data)
       })
@@ -47,7 +48,7 @@ const Post = () => {
       return alert('Comment can not be empty.')
     }
 
-    axios.post(`https://azure-test-3-imadahmed101.azurewebsites.net/comment`, {
+    axios.post(`${baseURL}/comment`, {
       comment,
       question,
       creator,

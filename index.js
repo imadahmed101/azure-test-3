@@ -44,9 +44,9 @@ mongoose.connect(DBCONNECTION, { useNewUrlParser: true });
 const studentRoute = require('./routes/student')
 const postRoute = require('./routes/post')
 const commentRoute = require('./routes/comment')
-app.use('/', (studentRoute))
-app.use('/post', (postRoute))
-app.use('/comment', (commentRoute))
+app.use('/api/', (studentRoute))
+app.use('/api/post', (postRoute))
+app.use('/api/comment', (commentRoute))
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))

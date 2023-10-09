@@ -3,8 +3,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Context } from '../App'
 
-const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/work'
-const editURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/editwork'
+import baseURL from '../baseURL'
+
+// const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/work'
+// const editURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/editwork'
 
 
 const EditWork = () => {
@@ -27,7 +29,7 @@ const EditWork = () => {
             return navigate('/login')
         }
 
-        axios.post(baseURL, { student })
+        axios.post(`${baseURL}/work`, { student })
             .then((response) => {
                 setStudents(response.data)
             })
@@ -41,7 +43,7 @@ const EditWork = () => {
     const formSubmit = (e) => {
         e.preventDefault()
 
-        axios.post(editURL, {
+        axios.post(`${baseURL}/editwork`, {
             student,
             experienceLevel,
             jobTitle,

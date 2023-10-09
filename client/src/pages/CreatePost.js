@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
-const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/post'
+import baseURL from '../baseURL'
+// const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/post'
 
 const CreatePost = () => {
 
@@ -19,7 +20,7 @@ const CreatePost = () => {
           return alert('Please fill out all fields.')
         }
     
-        axios.post(baseURL, {
+        axios.post(`${baseURL}/post`, {
           title,
           question,
           creator,

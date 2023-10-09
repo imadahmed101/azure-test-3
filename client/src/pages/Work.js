@@ -2,9 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Context } from '../App'
-
-const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/work'
-
+import baseURL from '../baseURL'
 
 const Work = () => {
 
@@ -21,7 +19,7 @@ const Work = () => {
       return navigate('/login')
     }
 
-    axios.post(baseURL, { student })
+    axios.post(`${baseURL}/work`, { student })
       .then((response) => {
         setStudents(response.data)
       })
