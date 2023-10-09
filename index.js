@@ -8,9 +8,7 @@ const DBCONNECTION = process.env.DBCONNECTION
 const mongoose = require('mongoose')
 const cors = require('cors')
 
-const studentRoute = require('./routes/student')
-const postRoute = require('./routes/post')
-const commentRoute = require('./routes/comment')
+
 
 // app.use(express.static("./client/build"))
 // app.use('/',express.static(path.join(__dirname, 'client', 'build', "index.html")));
@@ -22,6 +20,9 @@ app.use(cors({
 }))
 mongoose.connect(DBCONNECTION, { useNewUrlParser: true, useCreateIndex: true });
 const connection = mongoose.connection;
+connection.once('open', () => {
+    console.log("MongoDB database connection established successfully");
+});
 // const corsOpts = {
     // origin: 'https://studentconnect.azurewebsites.net',
     // credentials: true,
@@ -37,7 +38,9 @@ const connection = mongoose.connection;
 // app.get('/', (req, res) => {
 //     res.send('home page accessed')
 // })
-
+const studentRoute = require('./routes/student')
+const postRoute = require('./routes/post')
+const commentRoute = require('./routes/comment')
 app.use('/', (studentRoute))
 app.use('/post', (postRoute))
 app.use('/comment', (commentRoute))
