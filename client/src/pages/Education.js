@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import { Context } from '../App'
 
-const baseURL = 'http://localhost:5000/education'
+const baseURL = 'https://studentconnect.azurewebsites.net/education'
 
 
 const Education = () => {

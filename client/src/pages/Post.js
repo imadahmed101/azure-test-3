@@ -22,7 +22,7 @@ const Post = () => {
       return navigate('/login')
     }
 
-    axios.get(`http://localhost:5000/post/${postID}`)
+    axios.get(`https://studentconnect.azurewebsites.net/post/${postID}`)
       .then((response) => {
         setPost(response.data)
         setQuestion(response.data._id)
@@ -31,7 +31,7 @@ const Post = () => {
         alert(error.response.data)
       })
 
-    axios.get(`http://localhost:5000/comment`)
+    axios.get(`https://studentconnect.azurewebsites.net/comment`)
       .then((response) => {
         setComments(response.data)
       })
@@ -47,7 +47,7 @@ const Post = () => {
       return alert('Comment can not be empty.')
     }
 
-    axios.post(`http://localhost:5000/comment`, {
+    axios.post(`https://studentconnect.azurewebsites.net/comment`, {
       comment,
       question,
       creator,

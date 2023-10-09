@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Context } from '../App'
 
-const baseURL = 'http://localhost:5000/landing'
-const editURL = 'http://localhost:5000/editprofile'
+const baseURL = 'https://studentconnect.azurewebsites.net/landing'
+const editURL = 'https://studentconnect.azurewebsites.net/editprofile'
 
 
 const EditProfile = () => {

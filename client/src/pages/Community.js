@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-const baseURL = 'http://localhost:5000/post'
+const baseURL = 'https://studentconnect.azurewebsites.net/post'
 
 const Community = () => {
 
