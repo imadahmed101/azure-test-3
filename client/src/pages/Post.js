@@ -38,7 +38,7 @@ const Post = () => {
       .catch((error) => {
         alert(error.response.data)
       })
-  }, [token, navigate])
+  }, [token, comment])
 
   const formSubmit = (e) => {
     e.preventDefault()
