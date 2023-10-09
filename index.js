@@ -18,11 +18,12 @@ app.use(express.json());
 app.use(cors({
     origin: "https://azure-test-3-imadahmed101.azurewebsites.net/"
 }))
-mongoose.connect(DBCONNECTION, { useNewUrlParser: true, useCreateIndex: true });
-const connection = mongoose.connection;
-connection.once('open', () => {
-    console.log("MongoDB database connection established successfully");
-});
+// mongoose.connect(DBCONNECTION, { useNewUrlParser: true, useCreateIndex: true });
+// const connection = mongoose.connection;
+// connection.once('open', () => {
+//     console.log("MongoDB database connection established successfully");
+// });
+
 // const corsOpts = {
     // origin: 'https://studentconnect.azurewebsites.net',
     // credentials: true,
