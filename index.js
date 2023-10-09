@@ -3,7 +3,7 @@ const app =  express()
 const path = require('path')
 const env = require('dotenv/config')
 const port = process.env.PORT || 80
-const DBCONNECTION = process.env.DBCONNECTION || 'mongodb+srv://admin:admin123@devdbserver.4bx9t0h.mongodb.net/azure-test-3?retryWrites=true&w=majority'
+const DBCONNECTION = process.env.DBCONNECTION
 
 const mongoose = require('mongoose')
 const cors = require('cors')
@@ -20,7 +20,8 @@ app.use(express.json());
 app.use(cors({
     origin: "https://azure-test-3-imadahmed101.azurewebsites.net/"
 }))
-
+mongoose.connect(DBCONNECTION, { useNewUrlParser: true, useCreateIndex: true });
+const connection = mongoose.connection;
 // const corsOpts = {
     // origin: 'https://studentconnect.azurewebsites.net',
     // credentials: true,
@@ -60,6 +61,12 @@ app.get('*', (req, res) => {
 //     console.log('server running')
 // })
 
-mongoose.connect(DBCONNECTION)
-.then(() => {app.listen((port), console.log (`Server running on port ${port}`))})
-.catch((error) => console.log(error.message))
+// mongoose.connect(DBCONNECTION)
+// .then(() => {app.listen((port), console.log (`Server running on port ${port}`))})
+// .catch((error) => console.log(error.message))
+
+
+
+app.listen(port, () => {
+    console.log(`Server is running on port: ${ port }`);
+});
