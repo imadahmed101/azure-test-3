@@ -16,11 +16,15 @@ const commentRoute = require('./routes/comment')
 app.use(express.static('client/build'));
 app.use(express.json());
 const corsOpts = {
-    origin: 'https://studentconnect.azurewebsites.net',
-    credentials: true,
-    methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
-    allowedHeaders: ['Access-Control-Allow-Headers','Content-Type'],
-    exposedHeaders: ['Content-Type'],
+    // origin: 'https://studentconnect.azurewebsites.net',
+    // credentials: true,
+    // methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
+    // allowedHeaders: ['Access-Control-Allow-Headers','Content-Type'],
+    // exposedHeaders: ['Content-Type'],
+    // Access-Control-Allow-Origin: *
+        origin: '*',
+        optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+
 }
 app.use(cors(corsOpts))
 // app.get('/', (req, res) => {
