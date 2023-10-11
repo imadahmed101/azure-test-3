@@ -2,10 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import {Context} from '../App'
-
 import baseURL from '../baseURL'
-
-// const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/login'
 
 const Login = () => {
   const [username, setUsername] = useState('')
@@ -43,15 +40,9 @@ const Login = () => {
       setUserName(response.data.username)
       alert('Successfully logged in')
       navigate('/landing')
-
-      // console.log(response.data)
-
-
     })
     .catch((error) => {
-      // console.log(error)
       alert(error.response.data)
-
     })
   }
 

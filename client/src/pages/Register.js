@@ -30,10 +30,6 @@ const Register = () => {
       return alert('Please fill out all fields.')
     }
 
-    //implement more validation
-    //username has to be in email format
-    //password has to be specific way
-
     if (password !== retryPassword) {
       return alert('Passwords do not match.')
     }
@@ -45,12 +41,10 @@ const Register = () => {
       password
     })
     .then((response) => {
-      // console.log(response)
       alert('New user created')
       navigate('/login')
     })
     .catch((error) => {
-      // console.log(error)
       alert(error.response.data)
     })
   }

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import baseURL from '../baseURL'
-// const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/post'
 
 const Community = () => {
 
@@ -71,7 +70,6 @@ const Community = () => {
                   </Link>
                 </td>
                 <td className='p-4 border-[1px] border-gray-500'>{post.question}</td>
-                {/* <td className='p-4 border-[1px] border-gray-500'>{post.creator}</td> */}
                 <td className='p-4 border-[1px] border-gray-500'>{post.username}</td>
                 <td className='p-4 border-[1px] border-gray-500'><button className='text-red-600' onClick={() => { deletePost({postId: post._id, postCreator: post.creator}) }}>Delete</button></td>
               </tr>

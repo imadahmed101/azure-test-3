@@ -4,10 +4,6 @@ import axios from 'axios'
 import { Context } from '../App'
 import baseURL from '../baseURL'
 
-// const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/education'
-// const editURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/editeducation'
-
-
 const EditEducation = () => {
 
     const [students, setStudents] = useState([])

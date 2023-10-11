@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import baseURL from '../baseURL'
-// const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/post'
 
 const CreatePost = () => {
 
@@ -27,12 +26,10 @@ const CreatePost = () => {
           username
         })
         .then((response) => {
-          // console.log(response)
           alert('New post created')
           navigate('/community')
         })
         .catch((error) => {
-          // console.log(error)
           alert(error.response.data)
         })
       }

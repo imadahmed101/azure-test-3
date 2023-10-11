@@ -5,10 +5,6 @@ import { Context } from '../App'
 
 import baseURL from '../baseURL'
 
-// const baseURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/work'
-// const editURL = 'https://azure-test-3-imadahmed101.azurewebsites.net/editwork'
-
-
 const EditWork = () => {
 
     const [students, setStudents] = useState([])

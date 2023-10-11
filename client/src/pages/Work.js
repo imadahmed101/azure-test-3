@@ -31,7 +31,6 @@ const Work = () => {
 
 
   return (
-
     <div className='py-16'>
 
       <div className='max-w-[500px] mx-auto px-2'>
@@ -68,43 +67,8 @@ const Work = () => {
           <p className='mr-2'>Skills: </p>
           <p className='text-gray-700'>{students.skills}</p>
         </div>
-
       </div>
-
     </div>
-
-/* <div className='py-16'>
-
-          <tr>
-            <td></td>
-            <td className='text-gray-700'>{}</td>
-          </tr>
-          <tr>
-
-            <td>Job Title: </td>
-            <td className='text-gray-700'>{students.jobTitle}</td>
-          </tr>
-          <tr>
-
-            <td>Company Name: </td>
-            <td className='text-gray-700'>{students.companyName}</td>
-          </tr>
-          <tr>
-
-            <td>Job Profile: </td>
-            <td className='text-gray-700'>{students.jobProfile}</td>
-          </tr>
-          <tr>
-
-            <td>Skills: </td>
-            <td className='text-gray-700'>{students.skills}</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-      </div>
-
-    </div> */
   )
 }
 
