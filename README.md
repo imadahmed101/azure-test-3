@@ -2,7 +2,7 @@
 
 Application built as a student resource center to ask questions and get answers.
 
-Live Preview https://azure-test-3-imadahmed101.azurewebsites.net/">
+Live Preview https://azure-test-3-imadahmed101.azurewebsites.net/
 
 <img src="./client/public/sc.png"/>
 
