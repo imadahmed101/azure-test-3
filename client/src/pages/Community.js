@@ -30,7 +30,7 @@ const Community = () => {
       return alert('Error, can only delete your own post.')
     }
 
-    axios.delete(`${baseURL}/${postId}`)
+    axios.delete(`${baseURL}/post/${postId}`)
       .then((response) => {
         alert('Post Deleted')
         window.location.reload()
